@@ -1,0 +1,20 @@
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: centos-pod 
+spec:
+  containers:
+  - name: centos-container  
+    image: centos:7
+    command: ["sleep" , "10000"]
+    env:
+    - name: URL
+      value: www.devops.com 
+    - name: DOMAIN
+      value: roboshop.internal
+    - name: MONGO_URL 
+      value: "http://mongo-asdfsdaf.abc.com" 
+    - name: USERNAME 
+      value: admin 
+    - name: TIMEOUT
+      value: "10"
