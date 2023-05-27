@@ -21,6 +21,7 @@ metadata:
 data:
   MONGODB_URL: "mongodb.robot.local"
   MONGODB_USERNAME: "admin"
+  MONGODB_PASSWORD: "admin1212"
   ENVIRONMENT: "dev"
   DEV_CONTACT: "abc@xyz.com"
   TIMEOUT_INTERVAL: "30"
