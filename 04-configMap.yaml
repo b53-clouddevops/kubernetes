@@ -26,3 +26,15 @@ data:
   TIMEOUT_INTERVAL: "30"
   
 
+--- 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx                   
+spec:                              
+  containers:                        
+  - name: nginx-container                   
+    image: nginx
+    envFrom:
+      - configMapRef:
+          name: game-configmap
