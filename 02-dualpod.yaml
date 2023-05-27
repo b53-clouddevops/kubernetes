@@ -1,3 +1,4 @@
+# multi-container pod 
 apiVersion: v1
 kind: Pod
 metadata:
@@ -7,4 +8,4 @@ spec:
   - name: nginx                   
     image: nginx:1.14.2
   - name: alpine                  
-    image: alpine
+    image: httpd
