@@ -6,6 +6,12 @@
 # ENV         ENVIRONMENT=dev 
 # CMD         ["nginx", "-g", "daemon off;"]        
 
+# FROM          centos:7
+# CMD           ["google.com"]
+# ENTRYPOINT    [ "ping" , "-c" , "5" ]
+
 FROM          centos:7
+RUN           useradd roboshop 
+USER          roboshop
 CMD           ["google.com"]
 ENTRYPOINT    [ "ping" , "-c" , "5" ]
