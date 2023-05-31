@@ -36,7 +36,6 @@ metadata:
   annotations:
       service.beta.kubernetes.io/aws-load-balancer-type: internal
 spec:
-  type: LoadBalancer
   selector:
     app: nginx
   ports:
