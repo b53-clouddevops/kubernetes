@@ -250,3 +250,27 @@ deployment can be done in 2 ways  :
     $ helm list
 
 ``` 
+
+
+
+### How to create an internal classic load balancer ?
+
+```
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-deployment-svc
+  namespace: roboshop
+  annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: internal
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+      ```

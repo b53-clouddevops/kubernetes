@@ -35,6 +35,8 @@ kind: Service
 metadata:
   name: nginx-deployment-svc
   namespace: roboshop
+  annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: internal
 spec:
   type: LoadBalancer
   selector:
