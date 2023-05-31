@@ -50,14 +50,14 @@ metadata:
   name: ingress-myservicea
 spec:
   rules:
-  - host: myservicea.foo.org
+  - host: nginx.robossop.online             # If any of the serive that hits this host
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: myservicea
+            name: nginx-deployment-svc
             port:
               number: 80
   ingressClassName: nginx
