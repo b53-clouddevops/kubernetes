@@ -36,6 +36,7 @@ metadata:
   name: nginx-deployment-svc
   namespace: roboshop
 spec:
+  type: LoadBalancer
   selector:
     app: nginx
   ports:
